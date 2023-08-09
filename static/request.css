@@ -26,7 +26,7 @@ ul{
     place-items: center;
     justify-content: center;
     background-color: white;
-    width: min(90%, 55rem);
+    width: min(95%, 55rem);
     padding-block: 5rem;
     border-radius: 15px;
     box-shadow: 0 0 15px 0 rgba(49, 49, 49, 0.2);
@@ -105,3 +105,24 @@ ul{
 #genre:focus{
     outline: none;
 } 
+
+@media only screen and (max-width: 800px){
+    .container>h1{
+        text-align: center;
+        font-size: 1.8rem;
+        margin-inline: 1rem;
+    }
+    #movieForm{
+        flex-direction: column;
+        gap: 3rem;
+        padding-block: 0rem;
+        width: 80%;
+    }
+    #genre{
+        border-radius: 5px;
+    }
+    #movieForm>button{
+        padding-block: 1rem;
+        border-radius: 5px;
+    }
+}

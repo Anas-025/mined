@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+      *{
+        box-sizing: border-box;
+        margin: 0;padding: 0;
+      }
+      body{
+        background-color: aliceblue;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto Mono";
+      }
+      .container {
+        width: 95%;
+        background-color: white;
+        border: 3px solid red;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-inline: 1rem;
+      }
+      p{
+        padding-top: 2rem;
+        line-height: 1.6rem;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Error!</h1>
+      <p>
+        {{error}}
+      </p>
+    </div>
+  </body>
+</html>
