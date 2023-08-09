@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TMDb Movie Fetcher</title>
+    <link rel="stylesheet" href="request.css" />
+    <link rel="stylesheet" href="static/request.css" />
+    <link rel="stylesheet" href="../../static/request.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1>TMDB Movie Fetch 👋</h1>
+        <form id="movieForm" action="/fetch_movies" method="post">
+          <div class="input_container">
+            <input
+              type="text"
+              id="genre"
+              name="apiKey"
+              required
+              placeholder="Type Genre"
+              autocomplete="off"
+            />
+            <input type="hidden" id="genre-value" name="genre-value" />
+            <div class="list" id="genre-list">
+              <ul id="genreList">
+                <li data-value="28">Action</li>
+                <li data-value="35">Comedy</li>
+                <li data-value="80">Crime</li>
+                <li data-value="18">Drama</li>
+                <li data-value="36">History</li>
+              </ul>
+            </div>
+            <span class="clear">❌</span>
+          </div>
+          <button type="submit">Search</button>
+        </form>
+        <div id="movies"></div>
+      </div>
+    </div>
+
+    <script src="request.js"></script>
+  </body>
+</html>
