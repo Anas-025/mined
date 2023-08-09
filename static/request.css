@@ -1,3 +1,107 @@
-*{
-    background-color: black;
+:root{
+    --border-width: 3px;
 }
+ul{
+    list-style: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background-color: aliceblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    place-items: center;
+    justify-content: center;
+    background-color: white;
+    width: min(90%, 55rem);
+    padding-block: 5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 0 rgba(49, 49, 49, 0.2);
+    border: var(--border-width) solid black;
+}
+
+.clear{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+#movieForm{
+    display: flex;
+    width: 70%;
+}
+
+
+.input_container{
+    position: relative;
+    width: 100%;
+}
+
+.input_container>.list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(49, 49, 49, 0.2);
+    z-index: 999;
+
+
+    display: none;
+}
+
+.list>ul>li{
+    padding-block: 1.8rem;
+    padding-inline: 1rem;
+    margin-inline: 1.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+.list>ul>li:last-child{
+    margin-bottom: 1rem;
+}
+
+.list>ul>li:hover{
+    background-color: rgb(239, 239, 239);
+}
+
+#movieForm>button{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#genre{
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px 0 0 5px;
+    border: var(--border-width) solid black;
+}
+
+#genre:focus{
+    outline: none;
+} 
