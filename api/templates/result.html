@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies Result</title>
+    <link rel="stylesheet" href="static/result.css" />
+  </head>
+  <body>
+
+    <h1 class="results">Results 💗</h1>
+
+    <div class="grid-container">
+      {% for movie in movies %}
+      <div class="flip">
+        <div
+          class="front"
+          style="background-image: url('https://image.tmdb.org/t/p/w500{{ movie.backdrop_path }}')"
+        >
+          <h1 class="text-shadow">{{ movie.title }}</h1>
+        </div>
+        <div class="back">
+          <p>{{ movie.overview }}</p>
+          <a href="">more detials...</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
